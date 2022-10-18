@@ -1,7 +1,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include "main.h"
-​
+
 /**
  * print_repeat - Prints a character n times
  * @c: The character to print
@@ -10,11 +10,11 @@
 void print_repeat(char c, int n)
 {
 	int i;
-​
+
 	for (i = 0; i < n; i++)
 		_putchar(c);
 }
-​
+
 /**
  * _putnchars - Prints multiple characters
  * @n: The number of characters to print
@@ -23,7 +23,7 @@ void _putnchars(int n, ...)
 {
 	int i;
 	va_list args;
-​
+
 	if (n <= 0)
 		return;
 	va_start(args, n);
@@ -33,7 +33,7 @@ void _putnchars(int n, ...)
 	}
 	va_end(args);
 }
-​
+
 /**
  * is_letter - Checks if the given character is a letter
  * @c: The character to check
@@ -44,7 +44,7 @@ char is_letter(char c)
 {
 	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') ? TRUE : FALSE);
 }
-​
+
 /**
  * set_format_error - Sets the error after reading a format specifier
  * @format: The format string
@@ -58,7 +58,7 @@ void set_format_error(const char *format, int *pos, int len,
 {
 	char next_char = format[*pos + len + 1];
 	int i;
-​
+
 	if (last_token == 1 && next_char == '\0')
 	{
 		*error = -1;
@@ -87,7 +87,7 @@ void set_format_error(const char *format, int *pos, int len,
 		(*pos) += len;
 	}
 }
-​
+
 /**
  * put_num - Prints a number to the buffer
  * @zeros_count: The number of zeros to print
@@ -97,7 +97,7 @@ void set_format_error(const char *format, int *pos, int len,
 void put_num(int zeros_count, long num, char *str)
 {
 	int i;
-​
+
 	for (i = 0; i < zeros_count; i++)
 		_putchar('0');
 	for (i = num < 0 ? 1 : 0; *(str + i) != '\0'; i++)
