@@ -3,7 +3,7 @@
 ." Render on terminal with
 ." man ./man_3_printf
 ."
-.TH man 3 "28 July 2021" "v 1.0" "_printf man page"
+.TH man 3 "17 october 2022" "v 1.0" "_printf man page"
 
 .SH Name
 .B _printf
